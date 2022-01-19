@@ -1,37 +1,17 @@
-/* *************************************** */
-/* GRID - let the layout shape the content */
-/* *************************************** */
-
-.container {
-    /* display: flex; */
-    padding: 2rem;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.cell {
-    background-color: #BDDAB3;
-    padding: 1rem;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem;
-}
-
-
 /* ****************************************** */
 /* FLEX BOX - let the content shape the layout*/
 /* ****************************************** */
 
 .container {
-    /* display: flex; */
+    display: flex;
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+}
+
+.cell {
+    background-color: #BDDAB3;
 }
 
 .flex {
