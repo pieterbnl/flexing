@@ -4,10 +4,18 @@
 
 .container {
     /* display: flex; */
-    padding: 2rem;
     display: grid;
+    padding: 2rem;    
     grid-gap: 1rem;
-    grid-template-columns: 1fr 1fr 1fr;
+
+    /* Enforce 3 columns, regardless the viewport size*/
+    /* grid-template-columns: 1fr 1fr 1fr;
+
+    /* Enforce as many columns as possible (within the available viewport), 
+    with the minimin width of 20 rem 
+    Esentially making this layout responsive (whereas flexbox would continue wrapping) */
+    grid-template-columns: 
+    repeat(auto-fill, minmax(20rem, 1fr));
 }
 
 .cell {
@@ -15,6 +23,8 @@
     padding: 1rem;
 }
 
+/* apply 'grid' to a class to force a fixed grid layout 
+Note: this renders the 'grid-template-columns' auto-fill on the .container useless */
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
